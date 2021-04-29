@@ -167,6 +167,23 @@ d3
     const scalaX = d3.sacaleBand()
       .rangeRound([0, width])
       .domain(data.map(d => d.name)) 
+    
+    //Axis --> Ayuda a definir los ejes
+    const xAxis = d3.axisBottom()
+    const yAxis = d3.axisLeft()
+
+    const svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', chartWidth)
+      .attr('height', chartHeight)
+      .append('g')
+      .attr('transform', 'translate(' +  margin.left + ',' + margin.top + ')')
+    
+    svg
+      .append('g')
+      .attr()
+
   }).catch((err) => {
     console.log(err)
   })
